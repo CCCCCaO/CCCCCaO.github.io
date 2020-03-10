@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="参考1：HEXO官方文档   参考2：超详细Hexo+github搭建技术博客  安装准备需要安装node.js和git两部分,找到对应系统的版本安装即可 nodejs  git  安装Hexo使用npm(一种包管理器，和python的pip，conda，centos使用的yum等类似) 12npm install hexo-cli -g  如果你的网络质量不好，可以使用镜像 12npm ins">
+<meta name="description" content="参考1：HEXO官方文档 参考2：超详细Hexo+github搭建技术博客  安装准备需要安装node.js和git两部分,找到对应系统的版本安装即可  nodejs  git   安装Hexo使用npm(一种包管理器，和python的pip，conda，centos使用的yum等类似) 12npm install hexo-cli -g 如果你的网络质量不好，可以使用镜像 12npm inst">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&#39;Hexo部署&#39;">
 <meta property="og:url" content="https://github.com/CCCCCaO/2020/03/06/Hexodeploy/index.html">
 <meta property="og:site_name" content="CCCCCaO&#39;s blog">
-<meta property="og:description" content="参考1：HEXO官方文档   参考2：超详细Hexo+github搭建技术博客  安装准备需要安装node.js和git两部分,找到对应系统的版本安装即可 nodejs  git  安装Hexo使用npm(一种包管理器，和python的pip，conda，centos使用的yum等类似) 12npm install hexo-cli -g  如果你的网络质量不好，可以使用镜像 12npm ins">
+<meta property="og:description" content="参考1：HEXO官方文档 参考2：超详细Hexo+github搭建技术博客  安装准备需要安装node.js和git两部分,找到对应系统的版本安装即可  nodejs  git   安装Hexo使用npm(一种包管理器，和python的pip，conda，centos使用的yum等类似) 12npm install hexo-cli -g 如果你的网络质量不好，可以使用镜像 12npm inst">
 <meta property="article:published_time" content="2020-03-06T06:55:20.000Z">
 <meta property="article:modified_time" content="2020-03-06T07:36:58.047Z">
 <meta property="article:author" content="Sicheng Gu">
@@ -227,7 +227,7 @@
   
   
 
-  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
@@ -249,13 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-              
-              <a class="post-title-link post-title-link-external" target="_blank" href="/2020/03/06/Hexodeploy" itemprop="url">
-                'Hexo部署'
-                <i class="fa fa-external-link"></i>
-              </a>
-            </h1>
+          <h1 class="post-title" itemprop="name headline">'Hexo部署'</h1>
         
 
         <div class="post-meta">
@@ -279,6 +273,8 @@
 
           
 
+          
+            
           
 
           
@@ -304,51 +300,54 @@
 
       
         <blockquote>
-<p>参考1：<a href="https://hexo.io/zh-cn/docs/setup" target="_blank">HEXO官方文档</a></p>
+<p>参考1：<a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">HEXO官方文档</a></p>
+<p>参考2：<a href="https://segmentfault.com/a/1190000017986794" target="_blank" rel="noopener">超详细Hexo+github搭建技术博客</a></p>
 </blockquote>
-<blockquote>
-<p>参考2：<a href="https://segmentfault.com/a/1190000017986794" target="_blank">超详细Hexo+github搭建技术博客</a></p>
-</blockquote>
-<h2 id="安装准备">安装准备<a href="#安装准备" title="安装准备"></a></h2><p>需要安装node.js和git两部分,找到对应系统的版本安装即可</p>
-<ul><li><p><a href="https://nodejs.org/zh-cn/" target="_blank">nodejs</a></p>
+<h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><p>需要安装node.js和git两部分,找到对应系统的版本安装即可</p>
+<ul>
+<li><p><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">nodejs</a></p>
 </li>
-<li><p><a href="https://git-scm.com/download" target="_blank">git</a></p>
+<li><p><a href="https://git-scm.com/download" target="_blank" rel="noopener">git</a></p>
 </li>
-</ul><h2 id="安装hexo">安装Hexo<a href="#安装hexo" title="安装Hexo"></a></h2><p>使用npm(一种包管理器，和python的pip，conda，centos使用的yum等类似)</p>
+</ul>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>使用npm(一种包管理器，和python的pip，conda，centos使用的yum等类似)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
 <p>如果你的网络质量不好，可以使用镜像</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install hexo-cli -g --registry&#x3D;镜像源</span><br></pre></td></tr></table></figure>
-
 <p>可用镜像源有：</p>
-<div class="φcz"><div class="φdb"><table><thead><tr>
-<th align="center">名称</th><th align="center">URL</th></tr>
-</thead><tbody><tr>
-<td align="center">淘宝NPM镜像</td><td align="center"><a href="https://registry.npm.taobao.org" target="_blank">https://registry.npm.taobao.org</a></td></tr>
+<div class="table-container">
+<table>
+<thead>
 <tr>
-<td align="center">华为云镜像</td><td align="center"><a href="https://mirrors.huaweicloud.com/repository/npm/" target="_blank">https://mirrors.huaweicloud.com/repository/npm/</a></td></tr>
-</tbody></table></div></div><p>然后执行以下命令来初始化</p>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">淘宝NPM镜像</td>
+<td style="text-align:center"><a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></td>
+</tr>
+<tr>
+<td style="text-align:center">华为云镜像</td>
+<td style="text-align:center"><a href="https://mirrors.huaweicloud.com/repository/npm/" target="_blank" rel="noopener">https://mirrors.huaweicloud.com/repository/npm/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>然后执行以下命令来初始化</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo init myBlog</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>注意：这一条要会使用git来克隆相关文件到你本地的，记得挂上魔法上网工具，否则很慢很慢很慢。</p>
 </blockquote>
 <p>然后切换到myBlog目录下，使用<code>npm install</code>命令来自动地根据package.json文件来安装需要的依赖（有些依赖文件可能很大，执行的时候再安装比较轻量）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cd myBlog</span><br><span class="line"></span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-
-
 <p>网上所说的安装好目录是这样的</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.</span><br><span class="line"></span><br><span class="line">├── _config.yml # 网站的配置信息，您可以在此配置大部分的参数。</span><br><span class="line"></span><br><span class="line">├── package.json</span><br><span class="line"></span><br><span class="line">├── scaffolds # 模版文件夹</span><br><span class="line"></span><br><span class="line">├── source  # 资源文件夹，除 _posts 文件，其他以下划线_开头的文件或者文件夹不会被编译打包到public文件夹</span><br><span class="line"></span><br><span class="line">| ├── _drafts # 草稿文件</span><br><span class="line"></span><br><span class="line">| └── _posts # 文章Markdowm文件</span><br><span class="line"></span><br><span class="line">└── themes # 主题文件夹</span><br></pre></td></tr></table></figure>
-
 <p>而我自己安装好是这样的，不清楚有什么区别</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.</span><br><span class="line"></span><br><span class="line">├── _config.yml # 网站的配置信息，您可以在此配置大部分的参数。</span><br><span class="line"></span><br><span class="line">├── package.json # 依赖项配置文件</span><br><span class="line"></span><br><span class="line">├── package-lock.json</span><br><span class="line"></span><br><span class="line">├── scaffolds # 模版文件夹</span><br><span class="line"></span><br><span class="line">├── node_modules # hexo的依赖项</span><br><span class="line"></span><br><span class="line">├── .gitignore</span><br><span class="line"></span><br><span class="line">├── source  # 资源文件夹，除 _posts 文件，其他以下划线_开头的文件或者文件夹不会被编译打包到public文件夹</span><br><span class="line"></span><br><span class="line">| └── _posts # 文章Markdowm文件</span><br><span class="line"></span><br><span class="line">└── themes # 主题文件夹</span><br></pre></td></tr></table></figure>
-
-
-
 <p>然后输入以下命令来启动本地服务器</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
 <p>如果你和我一样用windows，会弹出相应的防火墙，点击允许即可。</p>
 <p>然后我们在浏览器输入<code>http://localhost:4000</code> 就可以看到你的博客了（本地）</p>
 <p>然后我们和github绑定在一起</p>
@@ -422,6 +421,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -529,7 +532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装准备"><span class="nav-number">1.</span> <span class="nav-text">安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装准备"><span class="nav-number">1.</span> <span class="nav-text">安装准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></div>
             
 
           </div>
@@ -743,6 +746,8 @@
   
 
   
+  
+
 
   
 
