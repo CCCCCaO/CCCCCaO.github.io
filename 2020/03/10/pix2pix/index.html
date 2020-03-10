@@ -85,11 +85,13 @@
 <meta property="og:url" content="https://github.com/CCCCCaO/2020/03/10/pix2pix/index.html">
 <meta property="og:site_name" content="CCCCCaO&#39;s blog">
 <meta property="og:description" content="2020.3.9-2020.3.14Gusicheng 本周工作内容 研读Pix2Pix 梳理GAN, DCGAN, CGAN, Pix2Pix等  论文研读论文： Image-to-Image Translation with Conditional Adversarial Networks 发表情况：发表于CVPR 2017 作者：Phillip Isola; Jun-Yan Zhu; Tin">
+<meta property="og:image" content="http://mypicture.cn-sh2.ufileos.com/GAN.png#pix_center">
 <meta property="article:published_time" content="2020-03-10T10:55:20.000Z">
-<meta property="article:modified_time" content="2020-03-10T13:01:15.081Z">
+<meta property="article:modified_time" content="2020-03-10T14:45:51.663Z">
 <meta property="article:author" content="Sicheng Gu">
 <meta property="article:tag" content="GAN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mypicture.cn-sh2.ufileos.com/GAN.png#pix_center">
 
 
 
@@ -341,7 +343,7 @@
 <h3 id="Introduction-引言"><a href="#Introduction-引言" class="headerlink" title="Introduction 引言"></a>Introduction 引言</h3><h4 id="问题定性"><a href="#问题定性" class="headerlink" title="问题定性"></a>问题定性</h4><p>本文认为，计算机图形学，计算机视觉，数字图像处理等领域中许多问题，都可以归结为一种将输入的图像“翻译”到输出相应图像的问题（Image-to-image translation problems)。</p>
 <h4 id="研究目标"><a href="#研究目标" class="headerlink" title="研究目标"></a>研究目标</h4><p>传统上，处理不同问题，例如图像去噪，纹理合成等（引文9，11，16，18，20，25，33，39，53，58，62）问题，即使它们都需要通过一个像素点来预测另一个像素点，但是它们都需要具体问题具体分析，提出针对性的特定的解决方案和模型。<br>而本文的目标则是，构建一个能够处理不同问题的，通用的且普适的框架（common framework)。</p>
 <h4 id="CNN的局限"><a href="#CNN的局限" class="headerlink" title="CNN的局限"></a>CNN的局限</h4><p>损失函数难以设计，需要极为专业的知识，即使CNN早已在图像预测领域是研究热点。若简单地将欧几里得距离作为损失，欧几里得距离会平均化结果，导致输出模糊。</p>
-<h4 id="GAN的出现"><a href="#GAN的出现" class="headerlink" title="GAN的出现"></a>GAN的出现</h4><p>如果说能够设定一个高层次的目标，例如我想要输出和现实难以区分，然后自动学习一个满足这样需求的损失函数而不是人为设计，这样就非常完美了，而GANs（引文13 24 44 52 63）恰好就是这样。GANs会自动地学习得到一个损失函数，它会试着将图像进行真假的二分类，因为损失函数是学习数据得到的，它能够适应不同数据，即能够在不同问题中使用。本文使用了CGANs（引文24），CGANs是一种带有条件的生成模型，图像翻译工作是需要输入图像作为条件的，CGANs适合这样的工作。</p>
+<h4 id="GAN的出现"><a href="#GAN的出现" class="headerlink" title="GAN的出现"></a>GAN的出现</h4><p>如果说能够设定一个高层次的目标，例如我想要输出和现实难以区分，然后自动学习一个满足这样需求的损失函数而不是人为设计，这样就非常完美了，而GANs（引文13 24 44 52 63）恰好就是这样。GANs会自动地学习得到一个损失函数（就是生成器模型），它会试着将图像进行真假的二分类，因为损失函数是学习数据得到的，它能够适应不同数据，即能够在不同问题中使用。本文使用了CGANs（引文24），CGANs是一种带有条件的生成模型，图像翻译工作是需要输入图像作为条件的，CGANs适合这样的工作。<br><img src="http://mypicture.cn-sh2.ufileos.com/GAN.png#pix_center" alt="GAN"></p>
 <h4 id="本文的贡献"><a href="#本文的贡献" class="headerlink" title="本文的贡献"></a>本文的贡献</h4><p>主要贡献是探究并证实CGANs能够在多种多样的问题上产出合理结果，因为过去的都是特定问题特定解决手段；次要贡献是提出了一种简洁的框架，这种框架结构能够产出较好结果，并且分析了几种不同的重要结构会产生的影响。</p>
 <hr>
 <h3 id="Related-work-相关工作"><a href="#Related-work-相关工作" class="headerlink" title="Related work 相关工作"></a>Related work 相关工作</h3><h4 id="Structured-losses-for-image-modeling"><a href="#Structured-losses-for-image-modeling" class="headerlink" title="Structured losses for image modeling"></a>Structured losses for image modeling</h4><p>Image-to-image translation问题常会被以对于每一个像素点进行分类或回归的方法（引文28，35，39，58，62）来构建模型，这样会造成输出空间的非结构化，即输出的像素点是被认为在条件上与输入的所有其他像素点是独立的，这会丢失结构上的信息。</p>
